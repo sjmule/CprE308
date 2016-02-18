@@ -1,0 +1,44 @@
+# An Explanation of USB Drivers in Linux
+## usb/core
+- file.c
+	-- usb_register_dev: gives the usb device a number
+	-- usb_deregister_dev: takes the number back from the usb device
+- devio.c: USB things in user space
+	-- struct usb_dev_state: 
+	-- struct async:
+	-- snoop:
+	-- usbfs_increase_memory_usage
+	-- usbfs_decrease_memory_usage
+	-- connected
+	-- usbdev_lseek: This sounds a lot like something from lecture
+	-- usbdev_read
+	-- async
+	-- free_async
+	-- async_newpending
+	-- async_removepending
+	-- async_getcompleted
+	-- async_getpending
+	-- snoop_urb
+	-- snoop_urb_data
+	-- copy_urb_data_to_user
+	-- cancel_bulk_urbs
+	-- async_completed
+	-- destroy_async
+	-- destroy_async_on_interface
+	-- destroy_all_async
+	-- driver_probe
+	-- driver_disconnect
+	-- driver_suspend
+	-- driver_resume
+	-- struct usbfs_driver: basically renames the last four functions to other things
+	-- claimintf: intf stands for interface. I think.
+	-- releaseintf
+	-- checkintf
+	-- findintfep: ep stands for endpoint. Pretty sure.
+	-- check_ctrlrecip
+	-- ep_to_host_endpoint
+	-- parse_usbdevfs_streams: This might be helpful. Still looking. This function allocates end points among other things. There's some error checking too.
+	-- match_devt
+	-- usb_device
+	-- usbdev_open: This allocates things for the usb device
+

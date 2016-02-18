@@ -1,0 +1,8 @@
+One of the expected outputs would be "I am thread 1\n"
+The actual output is either "I am thread 0\n" or "I am thread 0\n" "I am thread 2\n" "I am thread 2\n"
+
+After joining the threads, the program outputs
+"I am thread 1\n" "I am thread 2\n" "I am thread 0\n"
+This is the expected output of the program
+
+

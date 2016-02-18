@@ -1,0 +1,2 @@
+The program is not working properly because on line 32 the for loop is initialized to run to i<=length or until i=11. This causes rand_array to go out of bounds and results in a seg fault on line 40 when we try to access its memory at this out of bounds location.
+

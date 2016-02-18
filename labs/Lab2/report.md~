@@ -1,0 +1,10 @@
+Return values: 
+On success: The parent returns the PID of the child process
+The child returns 0
+On failure: The parent returns -1
+The child is not created and cannot return
+
+The parent's process ID is the same as it was
+The child's process ID is a new ID
+
+
